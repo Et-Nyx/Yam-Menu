@@ -1,13 +1,13 @@
 public class Item {
-    String prato;
-    double valor;
+  String prato;
+  double valor;
 
-    public Item (String p, double v) {
-        prato = p;
-        valor = v;
-    }
+  public Item (String p, double v) {
+    prato = p;
+    valor = v;
+  }
 
-    public void lista() {
-        System.out.println ( "| " + prato + ": R$" + valor );
-    }
+  public void lista() {
+    System.out.println ( "| " + prato + ": R$" + valor );
+  }
 }
