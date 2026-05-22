@@ -19,4 +19,13 @@ public abstract class Item {
   public String descricao() {
       return getTipo() + " - " + nome + ": " + precoFormat();
   }
+
+  public static Item criar(String tipo, String nome, double valor) {
+    switch (tipo) {
+      case "salgado": return new Salgado(nome, valor);
+      case "bebida":  return new Bebida(nome, valor);
+      case "doce":    return new Doce(nome, valor);
+      default:        return null;
+    }
+  }
 }
