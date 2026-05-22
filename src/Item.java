@@ -13,11 +13,11 @@ public abstract class Item {
   public double getValor() { return valor; }
 
   public abstract String getTipo();
-  public String precoFormat() {
+  public static String formatarValor(double valor) {
     return String.format(Locale.forLanguageTag("pt-BR"), "R$%.2f", valor);
   }
   public String descricao() {
-    return getTipo() + " - " + nome + ": " + precoFormat();
+    return getTipo() + " - " + nome + ": " + formatarValor(valor);
   }
 
   public static Item criar(String tipo, String nome, double valor) {
