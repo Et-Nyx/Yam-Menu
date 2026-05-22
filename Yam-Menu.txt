@@ -1,0 +1,11 @@
+Projeto A3 – Algoritmos e Programação Java
+Sistema de Menu de Lanchonete - Yam Menu
+
+Integrantes do grupo:
+
+Manoel Fonseca Pinto – RA: 12826230313
+Eduardo Teixeira de Moura Silva – RA: 12826135050
+Edson Câmara de Oliveira – RA: 12826123712
+
+Repositório do projeto (GitHub):
+https://github.com/Et-Nyx/Yam-Menu.git
