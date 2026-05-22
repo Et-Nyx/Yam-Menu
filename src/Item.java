@@ -17,7 +17,7 @@ public abstract class Item {
     return String.format(Locale.forLanguageTag("pt-BR"), "R$%.2f", valor);
   }
   public String descricao() {
-      return getTipo() + " - " + nome + ": " + precoFormat();
+    return getTipo() + " - " + nome + ": " + precoFormat();
   }
 
   public static Item criar(String tipo, String nome, double valor) {
