@@ -12,7 +12,7 @@ public class Tela {
   public static final String BLUE =       "\u001B[34m";
   public static final String MAGENTA =    "\u001B[35m";
   public static final String CYAN =       "\u001B[36m";
-  public static final int LARGURA = 29;
+  public static final int LARGURA = 40;
 
   public static void limparTela() {
     System.out.print("\033[H\033[2J");
@@ -137,7 +137,7 @@ public class Tela {
                       "/" + tipos.size() + ")";
        desenharTela(
          titulo,
-         "[P]róx. [A]nte. [N°]Escolha",
+         "[P]róximo  [A]nterior  [N°]->Escolha",
          escolhas,
          true
       );
@@ -176,7 +176,7 @@ public class Tela {
       linha(linhas);
     }
     vazia();
-    caixaLegenda("[F]inal. [R]emov. [0]Voltar");
+    caixaLegenda("[F]inalizar  [R]emover  [0]->Voltar");
   }
 
   public static void pausa(Scanner entrada) {

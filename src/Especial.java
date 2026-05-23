@@ -1,5 +1,3 @@
-import sun.net.www.content.text.plain;
-
 public class Especial extends Item {
   private String detalhe;
 

@@ -1,5 +1,37 @@
 tipo,nome,valor
-salgado,pastel,5.00
-bebida,limonada,3.50
-bebida,refri,4.00
-doce,brownie,3.25
+salgado,Pastel de Carne,5.00
+salgado,Pastel de Queijo,5.00
+salgado,Coxinha,4.50
+salgado,Esfiha de Carne,4.00
+salgado,Empada de Frango,4.50
+salgado,Pao de Queijo,3.00
+salgado,Enroladinho,4.00
+salgado,Kibe,4.50
+salgado,Misto Quente,6.00
+salgado,Bauru,7.50
+bebida,Limonada,3.50
+bebida,Refrigerante Lata,4.00
+bebida,Suco de Laranja,5.00
+bebida,Suco de Uva,5.00
+bebida,Agua Mineral,2.50
+bebida,Agua com Gas,3.00
+bebida,Cafe Expresso,3.50
+bebida,Cappuccino,6.00
+bebida,Cha Gelado,4.00
+bebida,Achocolatado,5.50
+doce,Brownie,3.25
+doce,Brigadeiro,2.50
+doce,Beijinho,2.50
+doce,Pudim,5.00
+doce,Sonho,4.00
+doce,Bolo de Cenoura,4.50
+doce,Torta de Limao,6.00
+doce,Cookie,3.00
+doce,Pao de Mel,4.50
+doce,Mousse de Maracuja,5.00
+Salgado + Bebida,Combo Lanche,12.90
+Serve 2 pessoas,Combo Familia,29.90
+Doce + Cafe,Combo da Tarde,9.90
+Promocao do dia,Pastelao Duplo,8.00
+Opcao sem gluten,Bolo Fit,7.50
+Opcao vegana,Wrap Vegetal,11.00

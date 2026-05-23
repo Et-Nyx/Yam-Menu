@@ -38,7 +38,7 @@ public class Persistencia {
 
     StringBuilder texto = new StringBuilder();
 
-    for(String linha : comanda.resumo(30)) {
+    for(String linha : comanda.resumo(40)) {
       texto.append(linha).append("\n");
     }
 
