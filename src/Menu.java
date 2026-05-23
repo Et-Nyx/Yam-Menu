@@ -15,10 +15,4 @@ public class Menu {
   }
 
   public int tamanho() { return itens.size(); };
-
-  public void exibir() {
-    for(int i = 0; i < itens.size(); i++) {
-      System.out.println((i + 1) + " - " + itens.get(i).descricao());
-    }
-  }
 }

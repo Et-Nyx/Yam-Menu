@@ -28,13 +28,19 @@ public class Comanda {
   public String resumo() {
     StringBuilder conta = new StringBuilder();
 
-    conta.append("Cliente: ").append(cliente).append("\n");
+    conta.append("Cliente: ")
+         .append(cliente)
+         .append("\n");
+
     for (Pedido pedido : itens) {
       conta.append(pedido.getItem().descricao()).append(" X ")
            .append(pedido.getQuantidade()).append(" -> ")
-           .append(Item.formatarValor(pedido.getSubtotal())).append("\n");
+           .append(Item.formatarValor(pedido.getSubtotal()))
+           .append("\n");
     }
-    conta.append("Total: ").append(Item.formatarValor(getTotal())).append("\n");
+    conta.append("Total: ")
+         .append(Item.formatarValor(getTotal()))
+         .append("\n");
 
     return conta.toString();
   }

@@ -14,10 +14,15 @@ public abstract class Item {
 
   public abstract String getTipo();
   public static String formatarValor(double valor) {
-    return String.format(Locale.forLanguageTag("pt-BR"), "R$%.2f", valor);
+    return String.format(
+      Locale.forLanguageTag("pt-BR"),
+      "R$%.2f", valor
+    );
   }
   public String descricao() {
-    return getTipo() + " - " + nome + ": " + formatarValor(valor);
+    return getTipo() + " - " +
+           nome + ": " +
+           formatarValor(valor);
   }
 
   public static Item criar(String tipo, String nome, double valor) {

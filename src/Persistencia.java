@@ -14,7 +14,11 @@ public class Persistencia {
       for(int i = 1; i < linhas.size(); i++) {
         String[] colunas = linhas.get(i).split(",");
 
-        itens.add(Item.criar(colunas[0], colunas[1], Double.parseDouble(colunas[2])));
+        itens.add(Item.criar(
+          colunas[0],
+          colunas[1],
+          Double.parseDouble(colunas[2])
+        ));
       }
     } catch (IOException erro) {
       System.out.println("Erro ao ler o menu: " + erro.getMessage());
