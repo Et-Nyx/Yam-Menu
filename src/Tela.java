@@ -89,7 +89,7 @@ public class Tela {
   public static void menuInicial() {
     List<String> escolhas = new ArrayList<>();
     escolhas.add("1 - Fazer Pedido");
-    escolhas.add("2 - Ver Cardápio");
+    escolhas.add("2 - Ver Comanda");
     escolhas.add("0 - Sair");
     desenharTela(
       "YAM MENU",
@@ -134,7 +134,7 @@ public class Tela {
                       "/" + tipos.size() + ")";
        desenharTela(
          titulo,
-         "[P/V] Página  [N°] Escolher ",
+         "[P]róx. [A]nte. [N°]Escolha",
          escolhas,
          true
       );
@@ -144,7 +144,7 @@ public class Tela {
 
       if(escolha.equalsIgnoreCase("P")) {
         pagina = (pagina + 1) % tipos.size();
-      } else if(escolha.equalsIgnoreCase("V")) {
+      } else if(escolha.equalsIgnoreCase("A")) {
         pagina = (pagina - 1 + tipos.size()) % tipos.size();
       } else if(escolha.equals("0")) {
         return -1;
@@ -155,9 +155,25 @@ public class Tela {
           if(numero >= 1 && numero <= menu.tamanho()) {
             return numero -1;
           }
-        } catch (NumberFormatException erro) {}
+          erro("Item fora do cardápio.");
+        } catch (NumberFormatException erro) {
+          erro("Opção inválida.");
+        }
+        pausa(entrada);
       }
     }
+  }
+
+  public static void menuComanda(Comanda comanda) {
+    topo();
+    caixaTitulo("COMANDA", false);
+    vazia();
+
+    for(String linhas : comanda.resumo(LARGURA)) {
+      linha(linhas);
+    }
+    vazia();
+    caixaLegenda("[F]inal. [R]emov. [0]Voltar");
   }
 
   public static void pausa(Scanner entrada) {

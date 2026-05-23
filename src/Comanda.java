@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Comanda {
   private String cliente;
@@ -13,6 +14,16 @@ public class Comanda {
     itens.add(new Pedido(item, quantidade));
   }
 
+  public void removerPedido(int indice) {
+    if(indice >= 0 && indice < itens.size()) {
+      itens.remove(indice);
+    }
+  }
+
+  public String getCliente() {
+    return cliente;
+  }
+
   public double getTotal() {
     double total = 0;
     for (Pedido pedido : itens) {
@@ -25,23 +36,31 @@ public class Comanda {
     return itens.isEmpty();
   }
 
-  public String resumo() {
-    StringBuilder conta = new StringBuilder();
+  public List<String> resumo(int largura) {
+    List<String> linhas = new ArrayList<>();
 
-    conta.append("Cliente: ")
-         .append(cliente)
-         .append("\n");
+    linhas.add(" Cliente: " + cliente);
+    linhas.add(" ");
 
-    for (Pedido pedido : itens) {
-      conta.append(pedido.getItem().descricao()).append(" X ")
-           .append(pedido.getQuantidade()).append(" -> ")
-           .append(Item.formatarValor(pedido.getSubtotal()))
-           .append("\n");
+    for(int i = 0; i < itens.size(); i++) {
+      Pedido pedido = itens.get(i);
+
+      String oeste = " " + (i + 1) + " - " +
+                    pedido.getQuantidade() + "x " +
+                    pedido.getItem().getNome();
+      String leste = Item.formatarValor(pedido.getSubtotal()) + " ";
+
+      linhas.add(alinhar(oeste, leste, largura));
     }
-    conta.append("Total: ")
-         .append(Item.formatarValor(getTotal()))
-         .append("\n");
+    linhas.add("-".repeat(largura));
+    linhas.add(alinhar(" TOTAL", Item.formatarValor(getTotal()) + " ", largura));
 
-    return conta.toString();
+    return linhas;
+  }
+
+  public String alinhar(String oeste, String leste, int largura) {
+    int meio = Math.max(1, largura - oeste.length() - leste.length());
+
+   return oeste + " ".repeat(meio) + leste;
   }
 }
