@@ -11,6 +11,7 @@ public abstract class Item {
 
   public String getNome() { return nome; }
   public double getValor() { return valor; }
+  public String getDetalhe() { return ""; }
 
   public abstract String getTipo();
   public static String formatarValor(double valor) {
@@ -30,7 +31,7 @@ public abstract class Item {
       case "salgado": return new Salgado(nome, valor);
       case "bebida":  return new Bebida(nome, valor);
       case "doce":    return new Doce(nome, valor);
-      default:        return null;
+      default:        return new Especial(tipo, nome, valor);
     }
   }
 }

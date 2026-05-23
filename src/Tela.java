@@ -124,6 +124,9 @@ public class Tela {
           escolhas.add((i + 1) + " - " +
                    item.getNome() + " " +
                    Item.formatarValor(item.getValor()));
+          if(!item.getDetalhe().isEmpty()) {
+            escolhas.add("   ↳" + item.getDetalhe());
+          }
         }
       }
       escolhas.add("0 - Voltar ao Início");
